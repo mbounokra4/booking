@@ -1,0 +1,7 @@
+backend/.env
+backend/.env.local
+backend/.env.dev
+backend/.env.test
+backend/.env.*.local
+backend/config/jwt/private.pem
+backend/config/jwt/public.pem

@@ -1,0 +1,64 @@
+/* ==============================
+   Global Enhancements — Premium
+   ============================== */
+
+/* Scrollbar moderne et discrète */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.35);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.55);
+}
+
+/* Focus visible cohérent avec ton branding */
+:focus-visible {
+  outline: 2px solid #0A1A2F;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Animation douce pour transitions de page */
+.page-enter {
+  animation: pageFade 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Fade + subtle blur (option premium) */
+.page-enter-soft {
+  animation: pageSoft 0.4s ease-out;
+}
+
+@keyframes pageSoft {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}

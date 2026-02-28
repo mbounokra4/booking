@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   Global base (Premium SaaS)
+   ========================= */
+@layer base {
+  :root {
+    color-scheme: light;
+
+    /* Brand colors */
+    --brand-dark: #0A1A2F;
+    --brand-accent: #3b82f6;
+
+    /* Surfaces */
+    --surface-light: #f8fafc;
+    --surface-card: #ffffff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+      "Apple Color Emoji", "Segoe UI Emoji";
+  }
+
+  /* Smooth global transitions */
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  /* Text selection */
+  ::selection {
+    background: rgba(59, 130, 246, 0.25);
+  }
+
+  /* Scrollbar (modern & subtle) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.35);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 116, 139, 0.55);
+  }
+
+  /* Links neutral by default */
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  a:hover {
+    @apply opacity-90;
+  }
+
+  /* Headings hierarchy */
+  h1 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+}
+
+/* =========================
+   Reusable components
+   ========================= */
+@layer components {
+
+  .page-container {
+    @apply max-w-6xl mx-auto px-4;
+  }
+
+  /* Premium card */
+  .card {
+    @apply rounded-3xl border border-slate-200 bg-white p-6 shadow-sm;
+  }
+
+  /* Glass card */
+  .card-glass {
+    @apply rounded-3xl border border-white/30 bg-white/70 backdrop-blur-xl shadow-2xl;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-2.5 font-medium transition
+      focus-visible:outline-none focus-visible:ring-4 active:scale-95;
+  }
+
+  .btn-primary {
+    @apply btn bg-slate-900 text-white hover:bg-slate-800 focus-visible:ring-slate-200 shadow-lg;
+  }
+
+  .btn-dark-gradient {
+    @apply btn text-white shadow-xl;
+    background: linear-gradient(135deg, #0A1A2F, #000000);
+  }
+
+  .btn-outline {
+    @apply btn border border-slate-900/20 bg-white/70 text-slate-900 hover:bg-white focus-visible:ring-slate-200;
+  }
+
+  .btn-soft {
+    @apply btn bg-slate-100 text-slate-900 hover:bg-slate-200;
+  }
+
+  .muted {
+    @apply text-slate-600;
+  }
+
+  /* Badge */
+  .badge {
+    @apply text-xs px-2.5 py-1 rounded-full font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-green-100 text-green-700;
+  }
+
+  .badge-neutral {
+    @apply badge bg-slate-100 text-slate-600;
+  }
+
+  .badge-admin {
+    @apply badge bg-blue-100 text-blue-700;
+  }
+}

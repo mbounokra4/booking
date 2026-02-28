@@ -1,0 +1,51 @@
+/* =========================
+   Root layout
+   ========================= */
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   Branding logo (optionnel)
+   ========================= */
+
+.logo {
+  height: 4.5rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 20px rgba(10, 26, 47, 0.25));
+}
+
+/* =========================
+   Smooth subtle animation
+   ========================= */
+
+@keyframes subtle-float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.logo-animated {
+  animation: subtle-float 4s ease-in-out infinite;
+}
+
+/* =========================
+   Utility helpers
+   ========================= */
+
+.centered-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text-muted-soft {
+  color: #64748b;
+}

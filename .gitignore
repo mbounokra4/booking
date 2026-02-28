@@ -1,0 +1,55 @@
+# ============================
+# FRONTEND (React + Vite)
+# ============================
+
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ============================
+# BACKEND (Symfony)
+# ============================
+
+/backend/vendor/
+/backend/var/
+
+# Environment files (VERY IMPORTANT)
+/backend/.env
+/backend/.env.local
+/backend/.env.dev
+/backend/.env.test
+/backend/.env.*.local
+
+# JWT keys
+/backend/config/jwt/private.pem
+/backend/config/jwt/public.pem
+
+# Cache
+/backend/.phpunit.result.cache
+
+# ============================
+# GLOBAL
+# ============================
+
+/.env
